@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+:root{
+    --red: rgb(10, 10, 10);
+    --hover:rgb(112, 179, 234);
+    --button:rgb(27, 131, 221);
+}
+
+
+
+/*  '*' to apply to all elements(Universal selector)*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin: 30px 5px 10px 5px;
+}
+.grid{
+    display: grid;
+    grid-template-rows: repeat(3,100px);
+    grid-template-columns: repeat(3,100px);
+}
+
+.box{
+    border: 2px solid var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box:hover{
+    background-color: var(--hover);
+    cursor: pointer;
+}
+
+/*em is relative to parent and rem is related to root*/
+.boxText{
+    font-size: 32px;
+}
+
+.info{
+    margin-left: 30px;
+}
+
+.info span{
+    font-size: 20px;
+}
+
+.imgBox img{
+    width: 0;
+    transition: width 2s ease-in;
+}
+
+.reset{
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: var(--button);
+}
+
+
+/*else if(boxTexts[ele[0]].innerText== player|| boxTexts[ele[0]].innerText==player&&
+boxTexts[ele[1]].innerText==player||boxTexts[ele[1]].innerText==player&&
+boxTexts[ele[2]].innerText==player||boxTexts[ele[2]].innerText==player&& boxTexts[ele[0]].innerText!==""){
+document.getElementById('result').innerText = "  Match Tie";
+}*/
